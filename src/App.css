@@ -1,38 +1,94 @@
-.App {
-  text-align: center;
+.Main {
+  background-color: rgba(5, 28, 62, 0.775);
+  height: 100vh;
+  padding: 24px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Input Start */
+
+.InputWrap {
+  display: flex;
+  height: 50px;
+  border-radius: 12px;
+  margin-bottom: 24px;
+  box-shadow: 3px 3px 12px 1px rgba(0, 0, 0, 0.775);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Input {
+  width: 80%;
+  padding: 4px 8px;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+  background-color: rgb(141, 147, 161);
+  font-size: 18px;
+  color: rgb(7, 7, 0);
+  border: none;
+  outline: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Button {
+  width: 20%;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+  background-color: rgba(74, 79, 86, 0.775);
+}
+
+/* Input Finish */
+
+/* Card Start */
+
+.CardList {
+  display: flex;
+}
+
+.Card {
+  width: 200px;
+  height: fit-content;
+  padding: 12px;
+  border-radius: 12px;
+  background-color: rgb(12, 77, 77);
+  font-size: 14px;
+  color: azure;
+  margin-left: 24px;
+  box-shadow: 3px 3px 12px 1px #060606;
+}
+
+.Card:first-child {
+  margin-left: 0;
+}
+
+.MainInfo {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.Title {
+  font-size: 24px;
+  font-weight: 500;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+Description {
+  margin-top: 4px;
+  font-size: 16px;
 }
+
+.Temperature {
+  margin-top: 12px;
+  font-size: 40px;
+  font-weight: 500;
+}
+
+.Temperature::after {
+  content: "°";
+}
+
+.Information {
+  margin-top: 12px;
+}
+
+.Information > div {
+  margin-top: 4px;
+}
+
+/* Card Finish */
