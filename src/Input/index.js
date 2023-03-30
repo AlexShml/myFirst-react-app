@@ -1,23 +1,24 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 
 import "../App.css";
 
-const InputTag = () => {
+export const Input = ({ setCitiesList }) => {
   const [inputValue, setInputValue] = useState("empty");
+
+  const handleOnClick = () => {
+    setCitiesList((currentArrey) => [...currentArrey, inputValue]);
+  };
+
   const handleOnChange = (event) => {
     setInputValue(event.target.value);
   };
 
   return (
-    <input className="Input" onChange={handleOnChange} value={inputValue} />
+    <div className="InputWrap">
+      <input className="Input" onChange={handleOnChange} value={inputValue} />
+      <button className="Button" onClick={handleOnClick}>
+        Add
+      </button>
+    </div>
   );
 };
-
-const BattonTag = () => <button className="Button">Add</button>;
-
-export const Input = () => (
-  <div className="InputWrap">
-    <InputTag />
-    <BattonTag />
-  </div>
-);
