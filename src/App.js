@@ -4,18 +4,14 @@ import "./App.css";
 
 import { Input } from "./Input";
 
-import { Card } from "./Card/card.js";
+import { CardList } from "./CardList/CardList";
 
 function App() {
   const [cityList, setCitiesList] = useState([]);
   return (
     <div className="Main">
       <Input setCitiesList={setCitiesList} />
-      <div className="CardList">
-        {cityList.map((city) => (
-          <Card key={city} city={city} />
-        ))}
-      </div>
+      <CardList cityList={cityList} />
     </div>
   );
 }

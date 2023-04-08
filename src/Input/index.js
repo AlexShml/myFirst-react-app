@@ -10,13 +10,12 @@ export const Input = ({ setCitiesList }) => {
     setCitiesList((currentArrey) => [...currentArrey, inputValue]);
     setInputValue("");
     inputRef.current.focus();
-    console.log("inputRef", inputRef);
   };
 
   const handleOnChange = (event) => {
     setInputValue(event.target.value);
   };
-
+  // console.log("render input");
   return (
     <div className="InputWrap">
       <input
